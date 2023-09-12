@@ -1,0 +1,10 @@
+
+<iframe id="calcus-iframe" width="100%" height="300" frameborder="0" style="width:1px; min-width: 100%;" scrolling="no" src="https://calcus.ru/currency?embed=1&lang=ru&buttoncolor=%232E8B57&currency2=EUR&currencyList=USD%2CEUR%2CRUB%2CCNY" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div style="margin-top:5px; font-size: 0.9em; color:#999">Конвертер валют предоставлен сайтом <a href="https://calcus.ru/currency" target="_blank">calcus.ru</a></div>
+<script>
+    window.addEventListener('message', function(event) {
+        if (event.data['height']) {
+            document.getElementById('calcus-iframe').style.height = event.data['height'] + 'px'
+        }
+    })
+</script>
